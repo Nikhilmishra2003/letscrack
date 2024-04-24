@@ -58,6 +58,8 @@ def LogoutPage(request):
     logout(request)
     return redirect('home')
 
+
+
 @login_required
 def dashboard(request):
     return render(request, 'dashboard.html')
@@ -87,3 +89,5 @@ def another_page(request):
 def my_view(request):
     user = request.user
     return render(request, 'index .html', {'user': user})
+
+
